@@ -1,0 +1,58 @@
+#Register_container{
+	display: none;
+}
+
+.space_1{
+	height: 40px;
+}
+
+#Register_container input,#Login input{
+	width: 160px;
+	display: block;           
+	height: 20px;       
+	border: 0;         
+	outline: 0;         
+	padding: 6px 10px;    
+	line-height: 24px;
+}
+
+.button{
+	width: 180px;   
+	display: block;           
+	height: 30px;       
+	border: 0;         
+	outline: 0;
+	line-height: 24px;
+	cursor: pointer;
+}
+
+.input_email,.input_password,.confirm_password,.button{
+	margin: auto;	
+}
+
+.error_notice{
+
+	height:100%;
+	width:50%;
+	line-height: 40px;
+}
+
+.change_link{
+
+	text-align:center;
+	margin-top: 40px;
+}
+
+#jump_to_login,#jump_to_register{
+	color:#a7c4c9;
+	text-decoration: blink;
+}
+
+	     
+.text{  
+	color: #e2dfe4;    
+}
+
+.a{
+	cursor: pointer;
+}
