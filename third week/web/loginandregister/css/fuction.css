@@ -2,6 +2,11 @@
 	display: none;
 }
 
+.login-center{background-color: white; width: 200px;}
+.login-center-img>img{width: 100%;}
+.login-center-img{width: 20px;height: 20px;float: left;margin-top: 5px;}
+#Login{float: left;}
+
 .space_1{
 	height: 40px;
 }

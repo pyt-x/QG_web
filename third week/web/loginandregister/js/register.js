@@ -1,6 +1,6 @@
-let re_btn = document.getElementById('re')
-let lg_btn = document.getElementById('lg')
-let serverUrl = 'http://recruit.qgailab.com/'
+var re_btn = document.getElementById('re')
+var lg_btn = document.getElementById('lg')
+var serverUrl = 'http://recruit.qgailab.com/'
 
 var TurnToLogin = document.getElementById('jump_to_login');
 var TurnToRegister = document.getElementById('jump_to_register');
@@ -36,14 +36,18 @@ lg_btn.onclick = function(){
 		username: document.getElementById('lg_username').value,
 		password: document.getElementById('lg_password').value,
 	}
-	xmlhttp.open("POST",serverUrl+"ajax/register",true);
+	xmlhttp.open("POST",serverUrl+"ajax/login",true);
 	xmlhttp.setRequestHeader("Content-type","application/json");
-	xmlhttp.send(data);
-	data: JSON.stringify(data);
-	if (data.code === 1) {
-	    alert(data.message)
-	} else {
-	    alert(data.message)
+	xmlhttp.send(JSON.stringify(data));		//直接把data转化并提交给服务器;
+	xmlhttp.onreadystatechange=function(){
+	if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			let response = JSON.parse(xmlhttp.responseText);
+			if (response.code === 1) {
+				alert(response.message)
+			} else {
+				alert(response.message)
+			}
+		}
 	}
 }
 
@@ -52,15 +56,22 @@ re_btn.onclick = function(){
 		username: document.getElementById('re_username').value,
 		password: document.getElementById('re_password').value,
 		email: document.getElementById('re_email').value,
+		phone: document.getElementById('re_phone').value,
+		name: document.getElementById('re_name').value,
 	}
 	xmlhttp.open("POST",serverUrl+"ajax/register",true);
 	xmlhttp.setRequestHeader("Content-type","application/json");
-	xmlhttp.send(data);
-	data: JSON.stringify(data);
-	if (data.code === 1) {
-	    alert(data.message)
-	} else {
-	    alert(data.message)
+	xmlhttp.send(JSON.stringify(data));
+	xmlhttp.onreadystatechange=function(){
+	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	    {
+			let response = JSON.parse(xmlhttp.responseText);
+			if (response.code === 1) {
+				alert(response.message)
+			} else {
+				alert(response.message)
+            }
+	    }
 	}
 }
 

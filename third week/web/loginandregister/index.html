@@ -23,16 +23,26 @@
 				WELCOME TO JOIN US
 			</font>
 		</div>
-		<div id="kong" style="height: 200px;"></div>
+		<div id="kong" style="height: 160px;"></div>
 		<!--登录-->
 		<div style="margin:0 44%;" id="Login">
-			<input type="text" placeholder="Your account/email" class="input_email" id="lg_username" autocomplete="off"/>
-				<div class="space_1"></div>
-				
-			<input type="password" placeholder="password" class="input_password" id="lg_password" autocomplete="off"/>
-				<div class="space_1"></div>
+			<div class="login-center">
+				<div class="login-center-img"><img src="img/name.png"/></div>
+				<div id="lg-input">
+					<input type="text" placeholder="Your account" class="input_email" id="lg_username" autocomplete="off"/>	
+				</div>
+			</div>
+			<div class="space_1"></div>
 			
-			<button class="button" id="re">Sign</button>
+			<div class="login-center">
+				<div class="login-center-img"><img src="img/password.png"/></div>
+				<div id="lg-input">
+					<input type="password" placeholder="password" class="input_password" id="lg_password" autocomplete="off"/>	
+				</div>
+			</div>
+			<div class="space_1"></div>
+			
+			<button class="button" id="lg">Sign</button>
 			<p class="change_link" >
 				<span class="text">No account ? <span id="jump_to_register" ><a onclick="return false;" class="a">Register</a></span></span>
 			</p>
@@ -48,7 +58,13 @@
 			<input type="text" placeholder="Your email" class="input_email " id="re_email" name="emailNumber" autocomplete="off"/>
 			<div class="space_1"></div>
 			
-			<button class="button" id="lg">Register</button>
+			<input type="text" placeholder="Your phone" class="input_email " id="re_phone" name="emailNumber" autocomplete="off"/>
+			<div class="space_1"></div>
+			
+			<input type="text" placeholder="Your name" class="input_email " id="re_name" name="emailNumber" autocomplete="off"/>
+			<div class="space_1"></div>
+			
+			<button class="button" id="re">Register</button>
 			<p class="change_link" >
 				<span class="text">Already? <span id="jump_to_login" ><a onclick="return false;" class="a">Login</a></span></span>
 			</p>
