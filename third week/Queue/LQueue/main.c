@@ -47,6 +47,31 @@ int input_check()
 	}
 }
 
+int input_check()
+{
+	int v,init;
+	while(1)
+	{
+		printf("输入有效值：");
+		v = scanf("%d",&init);
+		if(v==1)
+		{
+			return init;
+			break;			
+		}
+		else
+		{
+			printf("给出数字！\n"); 
+			while(1)
+			{
+				char c = getchar();
+				if(c == '\n')
+					break;
+			}			
+		}
+	}
+}
+
 void pri()
 {
 	printf("\n***********************WELCOME TO USE***************************");
